@@ -1,16 +1,46 @@
 Admin.create!(name: "Trainer 1", email: "vdmanh107@gmail.com",
   password: "123456", password_confirmation: "123456")
 
-# Admin.create!(name: "Huyen Cherry", email: "huyencherry13796@gmail.com",
-#   password: "123456", password_confirmation: "123456")
+Admin.create!(name: "Huyen Cherry", email: "huyencherry13796@gmail.com",
+  password: "123456", password_confirmation: "123456")
 
 Trainee.create!(name: "Manh Khong Dau", email: "manhkhongdau@gmail.com",
   password: "123456", password_confirmation: "123456")
 
+Course.create!(
+  name: "Ruby on Rails training",
+  detail: Faker::Lorem.sentence(3),
+  category: Faker::Number.between(0,1)
+)
+
+Course.create!(
+  name: "PHP essential",
+  detail: Faker::Lorem.sentence(3),
+  category: Faker::Number.between(0,1)
+)
+
+Course.create!(
+  name: "How to master git in 10 days",
+  detail: Faker::Lorem.sentence(3),
+  category: Faker::Number.between(0,1)
+)
+
+Course.create!(
+  name: "Algorithm fundamental",
+  detail: Faker::Lorem.sentence(3),
+  category: Faker::Number.between(0,1)
+)
+
+Course.create!(
+  name: "Another random course",
+  detail: Faker::Lorem.sentence(3),
+  category: Faker::Number.between(0,1)
+)
+
 # 10.times do
 #   Course.create!(
 #     name: Faker::Cat.name,
-#     detail: Faker::Cat.registry,
+#     detail: Faker::Lorem.sentence(3),
 #     category: Faker::Number.between(0,1)
 #   )
 # end
@@ -28,7 +58,7 @@ Trainee.create!(name: "Manh Khong Dau", email: "manhkhongdau@gmail.com",
 # 10.times do
 #   Subject.create!(
 #     name: Faker::Cat.name,
-#     detail: Faker::Cat.registry,
+#     detail: Faker::Lorem.sentence(3),
 #     category: Faker::Number.between(0,1),
 #     status: Faker::Number.between(0,1)
 #   )

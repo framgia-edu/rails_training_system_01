@@ -58,6 +58,7 @@ en:
   name_subject: "Subject name"
   view_detail_report: "View Detail"
   submit: "Submit"
+  back: "Back"
   courses:
     new:
       name: "Name"
@@ -75,11 +76,16 @@ en:
   users:
     new_modal:
       submit: "Submit"
+      close: "Close"
     import:
       data_imported: "Data imported"
   static_pages:
     home:
       import: "Import"
+      create_course_subject: "Create course subject"
+      create_user_course: "Create user course"
+      all_trainee: "All trainee"
+      add_user: "Add user"
   user_courses:
     new_modal:
       submit: "Submit"
@@ -87,4 +93,5 @@ en:
   course_subjects:
     new_modal:
       submit: "Submit"
+
 
