@@ -8,7 +8,6 @@ gem "bootstrap-sass", "3.3.7"
 gem "carrierwave", "1.2.2"
 gem "config"
 gem "devise"
-gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3"
@@ -23,13 +22,23 @@ gem "simple_form"
 gem "summernote-rails"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "dotenv-rails"
+gem "shoulda-matchers"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "dotenv-rails"
   gem "mysql2"
   gem "pry"
   gem "pry-rails"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+end
+
+group :test do
+  gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
+  gem "capybara"
+  gem "guard-rspec"
+  gem "launchy"
 end
 
 group :development do
@@ -41,5 +50,4 @@ end
 
 group :production do
   gem "pg", "0.20.0"
-  gem "dotenv-rails"
 end
