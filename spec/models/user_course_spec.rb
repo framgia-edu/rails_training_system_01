@@ -1,17 +1,17 @@
 require "rails_helper"
 
 RSpec.describe UserCourse, type: :model do
-  context "columns" do
-    it {should have_db_column(:progress).of_type :integer}
-    it {should have_db_column(:start_date).of_type :date}
-    it {should have_db_column(:end_date).of_type :date}
-    it {should have_db_column(:course_id).of_type :integer}
-    it {should have_db_column(:user_id).of_type :integer}
+  context "column" do
+    include_examples "have db column", :progress, :integer
+    include_examples "have db column", :start_date, :date
+    include_examples "have db column", :end_date, :date
+    include_examples "have db column", :course_id, :integer
+    include_examples "have db column", :user_id, :integer
   end
 
   context "associations" do
-    it {should belong_to :user}
-    it {should belong_to :course}
+    include_examples "association belongs to examples", :user
+    include_examples "association belongs to examples", :course
   end
 
   context "validates" do
@@ -24,8 +24,6 @@ RSpec.describe UserCourse, type: :model do
     user_course = UserCourse.new progress: 10, start_date: "2018-03-03",
       end_date: "2018-03-04", user: user, course: course
 
-    it "is presence" do
-      expect(user_course).to be_valid
-    end
+    include_examples "validation examples", user_course
   end
 end
